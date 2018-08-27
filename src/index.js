@@ -6,6 +6,7 @@ import bodyParser from 'body-parser';
 
 
 const app = express ();
+app.use(bodyParser.json());
 mongoose.connect('mongodb://localhost/bookworm', {useMongoClient: true});
 
 app.use("/api/auth", auth);
